@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div class="main">
+	<div class="slides">
+		{% load static %}<img src="{% static 'images/normie1.jpg' %}" alt=""/>
+		{% load static %}<img src="{% static 'images/normie2.jpg' %}" alt=""/>
+		{% load static %}<img src="{% static 'images/premium1.jpg' %}" alt=""/>
+		{% load static %}<img src="{% static 'images/premium2.jpg' %}" alt=""/>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	{% load static %}<script src="{% static 'js/jquery.slides.js' %}"></script>
+	<script>
+	$(function(){
+		$(".slides").slidesjs({
+			play: {
+				active: false,
+				effect: "slide",
+				interval: 2500,
+				auto: true,
+				swap: true,
+				pauseOnHover: false,
+				restartDelay: 2500
+			}
+		});
+	});
+	</script>
+</div>
+{% endblock %}

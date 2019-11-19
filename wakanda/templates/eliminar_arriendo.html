@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+    <h1> Eliminar arriendo </h1>
+    <p>¿Estás seguro querer eliminar el arriendo : {{arriendo}}? </p>
+
+    <form action = "" method = "POST">
+        {% csrf_token %}
+        <input type = "submit" action = "" value ="si, eliminar."/>
+    </form>
+
+{% endblock %}

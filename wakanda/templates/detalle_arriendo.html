@@ -1,0 +1,8 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+    <h1> Arriendo de sala: {{arriendo}} </h1>
+    <p> {{arriendo.fecha}} - {% if arriendo.sala %}{{arriendo.sala}}{% endif %} </p>
+
+{% endblock %}

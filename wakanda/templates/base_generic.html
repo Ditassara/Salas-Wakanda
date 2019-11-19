@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	{% block title %}<title>Salas Wakanda</title>{% endblock%}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	
+	{% load static %}<script src="{% static 'js/main.js' %}"></script>
+	{% load static %}<link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+	{% block header %}
+	<header>
+		<div class="contenedor">
+			<div class="logo">
+				{% load static %}<img src="{% static 'images/logo.png'%}" alt=""/>
+			</div>
+			<nav class="menu">
+				<ul>
+					<li><a href="{% url 'index' %}">Inicio</a></li>
+						
+					<li><a href="{% url 'salas' %}">Salas</a></li>
+						
+					<li><a href="">Agendar Hora</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	{% endblock %}
+	{% block content %}{% endblock %}
+	{% block footer %}
+	<div class="footer">
+		<div class="footer-content">
+			<div class="footer-section about">
+				<h2 class="logo-text"><span>Salas</span>Wakanda</h2>
+				<h3>
+					Somos una comunidad apasionada a la música, teniendo como objetivo apoyar a pequeñas bandas que están comenzando 
+					en el ámbito musical, entregándoles las herramientas necesarias para poder ensayar o grabar sus primeras canciones, 
+					teniendo a su disposición un amplio catálogo de instrumentos. Te invitamos a conocer nuestras instalaciones y ser 
+					participe de este proyecto.
+					
+				</h3>
+			</div>
+			<div class="footer-section contact-form">
+				<h2>Contactanos</h2>
+				<br>
+				<form name="contacto" action="index.html" onsubmit="return validarContacto()">
+					<input type="email" name="email" class="text-input contact-input" placeholder="Tu dirección email..."><br>
+					<textarea name="mensaje" class="text-input contact-input" placeholder="Tu mensaje..."></textarea><br>
+					<input type="submit" value="Enviar">
+				</form>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			&copy; salitas.com | Designed by Dani & Shen
+		</div>
+	</div>
+	{% endblock %}
+	
+</body>
+</html>

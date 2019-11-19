@@ -1,0 +1,41 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div class="main">
+	<div id="contenedor">
+		<div id="izquierdaarriba">
+			<center><h4>Sala Wakandita 1</h4>
+			{% load static %}<img src="{% static 'images/normie1.jpg' %}" align="center" style="max-height: 200px">
+			<br><br>
+			<p class="p1">$6.000</p>
+			<br>
+		</div>
+
+		<div id="derechaarriba">
+			<center><h4>Sala Wakandita 2</h4>
+			{% load static %}<img src="{% static 'images/normie2.jpg' %}" align="center" style="max-height: 200px">
+			<br><br>
+			<p class="p1">$7.500</p>
+			<br>
+		</div>
+
+		<div id="izquierdaabajo">
+			<center><h4>Sala Wakandiana 1</h4>
+			{% load static %}<img src="{% static 'images/premium1.jpg' %}" align="center" style="max-height: 200px">
+			<br><br>
+			<p class="p1">$10.000</p>
+			<br>
+			</div>
+
+		<div id="derechaabajo">
+			<center><h4>Sala Wakandiana 2</h4>
+			{% load static %}<img src="{% static 'images/premium2.jpg' %}" align="center" style="max-height: 200px">
+			<br><br>
+			<p class="p1">$12.000</p>
+			<br>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
