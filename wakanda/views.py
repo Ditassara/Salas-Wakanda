@@ -5,7 +5,11 @@ from .models import Tipo, Sala, Arriendo
 
 # Create your views here.
 def index(request):
-	return render(request,'index.html')
+	num_visits=request.session.get('num_visits', 0)
+	num_visits=request.session['num_visits']=num_visits+1
+	return render(request,'index.html',
+		     	context={'num_visits':num_visits},
+		     )
 	
 def salas(request):
 	return render(request,'salas.html')
