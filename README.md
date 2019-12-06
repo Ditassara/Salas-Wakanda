@@ -1,6 +1,8 @@
 # Salas-Wakanda
 Salas de Ensayo
 
+https://shencete.pythonanywhere.com/
+
 Admin: Shen
 Contraseña: cereal1234
 
